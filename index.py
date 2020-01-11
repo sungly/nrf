@@ -46,11 +46,8 @@ class NeuralRandomForest():
 
         self.combine_lists(X_train, Y_train)
         self.combine_lists(X_test, Y_test)
-        # a = self.split_point(X_train, Y_train, self.feature_size)
-
-        # print(a)
-        # self.generate_decision_trees(X_train, Y_train)
-        a = self.generate_random_forest(X_train, Y_train, X_test, Y_test)
+        
+        self.generate_random_forest(X_train, Y_train, X_test, Y_test)
 
 
     def combine_lists(self, lista, listb):
@@ -195,8 +192,6 @@ class NeuralRandomForest():
         # if no split is required | ie. leaf nodes
         if len(left_group) <= 0 or len(right_group) <= 0:
             node_value = self.freq_output(target_set)
-            # print("here")
-            # print(node.value)
             node.left.set_value(node_value)
             node.right.set_value(node_value)
             return
