@@ -1,3 +1,5 @@
+CISC 452 - Neural Random Forest 
+
 Required Libraries:
 1. pandas
 2. numpy
